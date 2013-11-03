@@ -61,6 +61,10 @@ CollectionModel.getTransform = function() {
   return function(doc) { return new model(doc); }
 }
 
+CollectionModel.getTransformOptions = function() {
+  return {transform: this.getTransform()};
+}
+
 // Util functions that are useful for collection models
 
 /**
