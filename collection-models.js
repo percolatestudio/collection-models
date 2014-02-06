@@ -11,7 +11,7 @@
  *     }
  *   });
  *
- *   Posts = new Meteor.Collection('posts', {transform: Post.transform});
+ *   Posts = new Meteor.Collection('posts', Post.getTransformOptions());
  *
  *
  * We could do something like:
