@@ -100,8 +100,11 @@ CollectionModel.makeCursor = function(fn) {
     where = where || {};
     options = options || {};
     
-    if (where.hash)
+    if (where instanceof Spacebars.kw)
       where = where.hash;
+
+    if (options instanceof Spacebars.kw)
+      options = options.kw
     
     return fn.call(this, where, options);
   }
