@@ -3,7 +3,7 @@ Package.describe({
 });
 
 Package.on_use(function (api, where) {
-  api.use('underscore');
+  api.use(['underscore', 'spacebars']);
   api.add_files('collection-models.js', ['client', 'server']);
   
   api.export('CollectionModel');
